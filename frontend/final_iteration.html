@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>skillTatva — Academia Industry Collaboration Portal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- ==================== NAVIGATION ==================== -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <img src="logo.jpg" alt="skillTatva Logo" class="logo-img">
+            <span class="brand-text">skillTatva</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#problem">Problem</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#dashboard">Dashboard</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="nav-auth">
+            <button class="btn btn-outline" onclick="showLogin()">Login</button>
+            <button class="btn btn-primary" onclick="showRegister()">Register</button>
+        </div>
+    </nav>
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Bridging the Gap Between <span class="highlight">Academia</span> & <span class="highlight">Industry</span></h1>
+            <p class="hero-subtitle">A unified platform for skill mapping, internships, and placements — connecting students, institutions, and industries.</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary btn-large" onclick="scrollToSection('features')">Explore Features</button>
+                <button class="btn btn-outline btn-large" onclick="scrollToSection('how-it-works')">How It Works</button>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number" data-target="0">0</span>
+                    <span class="stat-label">Students Mapped</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-target="0">0</span>
+                    <span class="stat-label">Industry Partners</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-target="0">0</span>
+                    <span class="stat-label">Universities</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-target="0">0</span>
+                    <span class="stat-label">Placements</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== PROBLEM STATEMENT ==================== -->
+    <section id="problem" class="problem-section">
+        <div class="container">
+            <h2 class="section-title">The Problem We Solve</h2>
+            <div class="problem-grid">
+                <div class="problem-card">
+                    <div class="problem-icon">🎓</div>
+                    <h3>Skill Gap</h3>
+                    <p>Students acquire skills in academia that often don't match industry expectations, leaving them unprepared for real-world roles.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">🏢</div>
+                    <h3>Industry Struggle</h3>
+                    <p>Companies face challenges finding candidates with the right competencies, leading to longer hiring cycles and mismatched placements.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">👨‍🏫</div>
+                    <h3>Limited Visibility</h3>
+                    <p>Academicians lack access to industry internship opportunities and current practices, making curriculum alignment difficult.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">🔌</div>
+                    <h3>Fragmented Ecosystem</h3>
+                    <p>No unified platform exists connecting students, universities, and industries for collaboration, mentorship, and placements.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FEATURES SECTION ==================== -->
+    <section id="features" class="features-section">
+        <div class="container">
+            <h2 class="section-title">Platform Features</h2>
+            
+            <div class="feature-tabs">
+                <button class="tab-btn active" onclick="switchTab('students')">For Students</button>
+                <button class="tab-btn" onclick="switchTab('industry')">For Industry</button>
+                <button class="tab-btn" onclick="switchTab('academia')">For Academia</button>
+                <button class="tab-btn" onclick="switchTab('institution')">For Institutions</button>
+            </div>
+
+            <!-- Students Tab -->
+            <div id="students" class="tab-content active">
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h4>Skill Assessment</h4>
+                        <p>Complete questionnaires and aptitude tests to evaluate technical and soft skills. Get a detailed skill profile with identified strengths and gaps.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>Skill Mapping</h4>
+                        <p>Receive personalized recommendations for industries, job roles, and skill development programs aligned with current market demands.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>Digital Portfolio</h4>
+                        <p>Maintain a verified digital portfolio showcasing skills, certifications, projects, internships, and achievements.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>Internship & Jobs</h4>
+                        <p>Search, apply, and track internship and placement opportunities. Get matched based on your skill profile and career interests.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Industry Tab -->
+            <div id="industry" class="tab-content">
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h4>Post Opportunities</h4>
+                        <p>Publish internships, projects, apprenticeships, and entry-level jobs with required skills and qualifications.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>Candidate Matching</h4>
+                        <p>AI-powered recommendation engine matches you with students whose skill profiles align with your requirements.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>Learning Programs</h4>
+                        <p>Offer training programs, certification courses, workshops, and mentorship initiatives to upskill future talent.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>Recruitment Management</h4>
+                        <p>Shortlist candidates, track applications, and manage the entire hiring pipeline from one dashboard.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Academia Tab -->
+            <div id="academia" class="tab-content">
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h4>Faculty Internships</h4>
+                        <p>Explore industrial training opportunities, Faculty Development Programs (FDPs), and consultancy projects.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>Collaborative Research</h4>
+                        <p>Partner with industries on live projects, research collaborations, and innovation challenges.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>Guest Lectures & Workshops</h4>
+                        <p>Invite industry experts for knowledge-sharing sessions and organize workshops for students.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>Curriculum Alignment</h4>
+                        <p>Gain visibility into industry practices to align teaching methodologies with current market needs.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Institution Tab -->
+            <div id="institution" class="tab-content">
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h4>Analytics Dashboard</h4>
+                        <p>Monitor student skill development, internship participation, and placement progress with real-time data.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>Placement Tracking</h4>
+                        <p>Track placement readiness, recruitment outcomes, and skill demand trends across departments.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>Document Management</h4>
+                        <p>Securely manage resumes, certificates, internship reports, and academic records for all students.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>Industry Partnerships</h4>
+                        <p>Manage collaborations, MOUs, and partnership programs with multiple industry stakeholders.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== HOW IT WORKS ==================== -->
+    <section id="how-it-works" class="how-section">
+        <div class="container">
+            <h2 class="section-title">How skillTatva Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">01</div>
+                    <h4>Register & Assess</h4>
+                    <p>Students register and complete skill assessments to build their verified profile.</p>
+                </div>
+                <div class="step-arrow">→</div>
+                <div class="step">
+                    <div class="step-number">02</div>
+                    <h4>Map & Match</h4>
+                    <p>Platform maps skills to industry requirements and recommends relevant opportunities.</p>
+                </div>
+                <div class="step-arrow">→</div>
+                <div class="step">
+                    <div class="step-number">03</div>
+                    <h4>Apply & Learn</h4>
+                    <p>Students apply to internships, enroll in learning programs, and build experience.</p>
+                </div>
+                <div class="step-arrow">→</div>
+                <div class="step">
+                    <div class="step-number">04</div>
+                    <h4>Connect & Place</h4>
+                    <p>Industries review matched candidates and facilitate placements and collaborations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== DASHBOARD PREVIEW ==================== -->
+    <section id="dashboard" class="dashboard-section">
+        <div class="container">
+            <h2 class="section-title">Dashboard Preview</h2>
+            <div class="dashboard-grid">
+                <div class="dash-card">
+                    <h5>Skill Analytics</h5>
+                    <div class="mock-chart">
+                        <div class="bar" style="height: 60%"></div>
+                        <div class="bar" style="height: 85%"></div>
+                        <div class="bar" style="height: 45%"></div>
+                        <div class="bar" style="height: 90%"></div>
+                        <div class="bar" style="height: 70%"></div>
+                    </div>
+                    <p>Track skill proficiency across domains</p>
+                </div>
+                <div class="dash-card">
+                    <h5>Opportunity Feed</h5>
+                    <div class="mock-list">
+                        <div class="mock-item">Software Intern @ TechCorp</div>
+                        <div class="mock-item">Data Analyst @ DataSystems</div>
+                        <div class="mock-item">Research Assistant @ AI Lab</div>
+                    </div>
+                    <p>Personalized internship recommendations</p>
+                </div>
+                <div class="dash-card">
+                    <h5>Application Tracker</h5>
+                    <div class="mock-progress">
+                        <div class="progress-row"><span>Applied</span><span class="badge">12</span></div>
+                        <div class="progress-row"><span>Shortlisted</span><span class="badge badge-green">5</span></div>
+                        <div class="progress-row"><span>Interview</span><span class="badge badge-amber">3</span></div>
+                        <div class="progress-row"><span>Offer</span><span class="badge badge-blue">1</span></div>
+                    </div>
+                    <p>Real-time application status updates</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CONTACT / FOOTER ==================== -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h4>skillTatva</h4>
+                    <p>Building India's academia-industry bridge, one skill at a time.</p>
+                    <p><strong>Email:</strong> skilltatva@gmail.com</p>
+                    <p><strong>Phone:</strong> +91-xxxxx-9999z</p>
+                </div>
+                <form class="contact-form" onsubmit="handleContact(event)">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <select required>
+                        <option value="">I am a...</option>
+                        <option value="student">Student</option>
+                        <option value="industry">Industry Representative</option>
+                        <option value="academician">Academician</option>
+                        <option value="institution">Institution Admin</option>
+                    </select>
+                    <textarea placeholder="Your Message" rows="4" required></textarea>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+        <footer>
+            <p> skillTatva — SIH26044 Solution. All rights reserved.</p>
+        </footer>
+    </section>
+
+    <!-- ==================== LOGIN MODAL ==================== -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('loginModal')">&times;</span>
+            <h3>Login to skillTatva</h3>
+            <form onsubmit="handleLogin(event)">
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <select required>
+                    <option value="">Login as...</option>
+                    <option value="student">Student</option>
+                    <option value="industry">Industry</option>
+                    <option value="academician">Academician</option>
+                    <option value="institution">Institution</option>
+                </select>
+                <button type="submit" class="btn btn-primary btn-full">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- ==================== REGISTER MODAL ==================== -->
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('registerModal')">&times;</span>
+            <h3>Register on skillTatva</h3>
+            <form onsubmit="handleRegister(event)">
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <select required>
+                    <option value="">Register as...</option>
+                    <option value="student">Student</option>
+                    <option value="industry">Industry</option>
+                    <option value="academician">Academician</option>
+                    <option value="institution">Institution</option>
+                </select>
+                <button type="submit" class="btn btn-primary btn-full">Create Account</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
